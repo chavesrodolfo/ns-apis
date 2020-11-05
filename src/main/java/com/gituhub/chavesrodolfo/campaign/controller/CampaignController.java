@@ -2,7 +2,8 @@ package com.gituhub.chavesrodolfo.campaign.controller;
 
 import java.util.List;
 
-import com.gituhub.chavesrodolfo.campaign.model.CampaignRepresentation;
+import com.gituhub.chavesrodolfo.campaign.exceptions.CampaignNotAcceptedException;
+import com.gituhub.chavesrodolfo.campaign.model.representations.CampaignRepresentation;
 import com.gituhub.chavesrodolfo.campaign.service.CampaignService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,11 +25,11 @@ public class CampaignController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Novice Players API";
+        return "Campaigns API";
     }
 
     @PostMapping("/campaigns")
-    public CampaignRepresentation createCampaign(@RequestBody CampaignRepresentation campaignRepresentation) {
+    public CampaignRepresentation createCampaign(@RequestBody CampaignRepresentation campaignRepresentation) throws CampaignNotAcceptedException{
         campaignRepresentation = campaignService.create(campaignRepresentation);
         return campaignRepresentation;
     }

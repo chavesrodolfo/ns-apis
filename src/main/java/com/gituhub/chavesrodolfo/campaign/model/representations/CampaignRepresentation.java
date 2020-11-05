@@ -1,4 +1,4 @@
-package com.gituhub.chavesrodolfo.campaign.model;
+package com.gituhub.chavesrodolfo.campaign.model.representations;
 
 import java.util.Date;
 
@@ -10,6 +10,7 @@ import lombok.Setter;
 public class CampaignRepresentation {
     private Long id;
     private String name;
-    private Date validity;
+    private Date startDate;
+    private Date endDate;
     private Long heartClub;
 }

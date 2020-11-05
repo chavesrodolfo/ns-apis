@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import com.gituhub.chavesrodolfo.campaign.model.representations.CampaignRepresentation;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -15,8 +17,10 @@ import lombok.NoArgsConstructor;
 public class Campaign {
     
     public Campaign(CampaignRepresentation campaignRepresentation) {
+        this.id = campaignRepresentation.getId();
         this.name = campaignRepresentation.getName();
-        this.validity = campaignRepresentation.getValidity();
+        this.startDate = campaignRepresentation.getStartDate();
+        this.endDate = campaignRepresentation.getEndDate();
         this.heartClub = campaignRepresentation.getHeartClub();
     }
     
@@ -25,14 +29,16 @@ public class Campaign {
     private Long id;
     
     private String name;
-    private Date validity;
+    private Date startDate;
+    private Date endDate;
     private Long heartClub;
 
 	public CampaignRepresentation transformToRepresentation() {
         CampaignRepresentation campaignRepresentation = new CampaignRepresentation();
         campaignRepresentation.setName(this.getName());
         campaignRepresentation.setHeartClub(this.getHeartClub());
-        campaignRepresentation.setValidity(this.validity);
+        campaignRepresentation.setStartDate(this.startDate);
+        campaignRepresentation.setEndDate(this.endDate);
         campaignRepresentation.setId(this.getId());
 		return campaignRepresentation;
     }

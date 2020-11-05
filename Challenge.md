@@ -10,11 +10,11 @@
 
 ### Regras de negócio
 
-* O Sistema não deverá retornar campanhas que estão com a data de vigência vencidas;
+- [x] O Sistema não deverá retornar campanhas que estão com a data de vigência vencidas;
 
-* No cadastramento de uma nova campanha, deve-se verificar se já existe uma campanha ativa para aquele período (vigência), caso exista uma campanha ou N campanhas associadas naquele período, o sistema deverá somar um dia no término da vigência de cada campanha já existente.
+- [x] No cadastramento de uma nova campanha, deve-se verificar se já existe uma campanha ativa para aquele período (vigência), caso exista uma campanha ou N campanhas associadas naquele período, o sistema deverá somar um dia no término da vigência de cada campanha já existente.
 
-* Caso a data final da vigência seja igual a outra campanha, deverá ser acrescido
+- [x] Caso a data final da vigência seja igual a outra campanha, deverá ser acrescido
 um dia a mais de forma que as campanhas não tenham a mesma data de término de vigência.
 
 ### Exemplos

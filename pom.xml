@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.gituhub.chavesrodolfo</groupId>
-	<artifactId>campaign</artifactId>
+	<artifactId>campaign-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>campaign</name>
+	<name>campaign-api</name>
 	<description>Campaign API</description>
 
 	<properties>
@@ -43,6 +43,11 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>3.6.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
