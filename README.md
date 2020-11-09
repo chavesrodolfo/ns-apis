@@ -33,4 +33,4 @@ Endpoints:
 
 * Criação de cliente: *POST* `http://localhost:8081/api/customers`
 * Associação de cliente com campanha: *PATCH* `http://localhost:8081/api/customers/updatecampaigns`
-* Listagem de clientes e suas camapanhas: *GET* `http://localhost:8081/api/customers`
+* Listagem de clientes e suas campanhas: *GET* `http://localhost:8081/api/customers`
