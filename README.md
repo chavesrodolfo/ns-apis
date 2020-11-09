@@ -23,7 +23,7 @@ Endpoints:
 
 * Criação de campanhas: *POST* `http://localhost:8080/api/campaigns`
 
-    *body*
+    *body:*
     ```properties
     {
       "name": "Campanha X",
@@ -44,7 +44,7 @@ Endpoints:
 
 * Criação de cliente: *POST* `http://localhost:8081/api/customers`
 
-    *body*
+    *body:*
     ```properties
     {
       "fullName": "Joao",
@@ -56,7 +56,7 @@ Endpoints:
 
 * Associação de cliente com campanha: *PATCH* `http://localhost:8081/api/customers/updatecampaigns`
 
-    *body*
+    *body:*
     ```properties
     {
       "id": 1,
