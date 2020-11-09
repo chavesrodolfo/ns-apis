@@ -22,6 +22,17 @@ Coloque cada uma das APIs em execução utilizando o comando `mvn spring-boot:ru
 Endpoints:
 
 * Criação de campanhas: *POST* `http://localhost:8080/api/campaigns`
+
+    *body*
+    ```properties
+    {
+      "name": "Campanha X",
+      "startDate": "2021-10-01",
+      "endDate": "2021-10-15",
+      "heartClub": 1
+    }
+    ```
+
 * Listagem de camapanhas ativas: *GET* `http://localhost:8080/api/campaigns`
 * Obter dados de uma campanha: *GET* `http://localhost:8080/api/campaigns/{id}`
 * Apagar uma campanha: *DELETE* `http://localhost:8080/api/campaigns/{id}`
@@ -32,5 +43,25 @@ Endpoints:
 Endpoints:
 
 * Criação de cliente: *POST* `http://localhost:8081/api/customers`
+
+    *body*
+    ```properties
+    {
+      "fullName": "Joao",
+      "email": "joao@gmail.com",
+      "dateOfBirth": "2000-10-01",
+      "heartClub": 1
+    }
+    ```
+
 * Associação de cliente com campanha: *PATCH* `http://localhost:8081/api/customers/updatecampaigns`
+
+    *body*
+    ```properties
+    {
+      "id": 1,
+      "campaigns": "1,2,3"
+    }
+    ```
+
 * Listagem de clientes e suas campanhas: *GET* `http://localhost:8081/api/customers`
